@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Request data</button>
+<p id="demo"></p>
+
+<script>
+/*function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  //xhttp.open("GET", "https://fakestoreapi.com/users");
+  //xhttp.open("GET", "https://fakestoreapi.com/users" + Math.random());
+  //xhttp.open("GET", "https://fakestoreapi.com/users?fname=Henry&lname=Ford");
+  xhttp.open("POST", "https://fakestoreapi.com/users");
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send();
+}*/
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "https://fakestoreapi.com/users", false);
+  xhttp.send();
+  document.getElementById("demo").innerHTML = xhttp.responseText;
+}
+</script>
+
+</body>
+</html>
